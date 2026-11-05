@@ -5,9 +5,68 @@
     <title>Panel de actividades</title>
   </head>
   <body>
-    <h1>Mi panel de actividades personales</h1>
-    <script>
-    console.log("La página cargó");
-  </script>
+    <header>
+  <h1>Mi panel de actividades personales</h1>
+
+  <nav>
+    <a href="#tareas">Ver tareas</a>
+    <a href="#nueva">Nueva tarea</a>
+  </nav>
+</header>
+
+<main>
+  <section id="tareas">
+    <h2>Tareas de hoy</h2>
+
+    <ul>
+      <li>
+        Comprar café
+        <span>Prioridad: alta</span>
+        <button type="button">Completar</button>
+      </li>
+
+      <li>
+        Preparar el informe
+        <span>Prioridad: media</span>
+        <button type="button">Completar</button>
+      </li>
+    </ul>
+  </section>
+  
+<section id="nueva">
+  <h2>Crear nueva tarea</h2>
+
+  <form>
+    <p>
+      <label for="titulo">Título de la tarea</label>
+      <input type="text" id="titulo"
+             name="titulo" required maxlength="80">
+    </p>
+
+    <p>
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion"
+                name="descripcion"></textarea>
+    </p>
+
+    <p>
+      <label for="prioridad">Prioridad</label>
+      <select id="prioridad" name="prioridad">
+        <option value="baja">Baja</option>
+        <option value="media">Media</option>
+        <option value="alta">Alta</option>
+      </select>
+    </p>
+
+    <button type="submit">Crear tarea</button>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <p>Hecho con HTML</p>
+</footer>
+
   </body>   
 </html>
